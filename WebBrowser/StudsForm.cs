@@ -45,7 +45,7 @@ namespace WebBrowser
             foreach (var stud in studentsList.Where(x => x.Group.Equals(text)))
             {
                 dataGridView1.Rows.Add(stud.ToArr());
-                treeView1.SelectedNode.Nodes.Add(stud.LastName);
+                treeView1.SelectedNode.Nodes.Add(stud.FirstName);
             }
 
         }
@@ -54,8 +54,34 @@ namespace WebBrowser
         {
             string LsName = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             Student student = studentsList.First(x => x.FirstName.Equals(LsName));
-            StudentForm studentForm = new StudentForm(student); 
+            StudentForm studentForm = new StudentForm(student, studentsList.IndexOf(student), ref this.studentsList); 
             studentForm.ShowDialog();
+            dataGridView1.Rows.Clear();
+            treeView1.SelectedNode.Nodes.Clear();
+            string text = treeView1.SelectedNode.Text;
+            DataTable table = new DataTable();
+            foreach (var stud in studentsList.Where(x => x.Group.Equals(text)))
+            {
+                dataGridView1.Rows.Add(stud.ToArr());
+                treeView1.SelectedNode.Nodes.Add(stud.FirstName);
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string LsName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            Student student = studentsList.First(x => x.FirstName.Equals(LsName));
+            StudentForm studentForm = new StudentForm(student, studentsList.IndexOf(student), ref this.studentsList);
+            studentForm.ShowDialog();
+            dataGridView1.Rows.Clear();
+            treeView1.SelectedNode.Nodes.Clear();
+            string text = treeView1.SelectedNode.Text;
+            DataTable table = new DataTable();
+            foreach (var stud in studentsList.Where(x => x.Group.Equals(text)))
+            {
+                dataGridView1.Rows.Add(stud.ToArr());
+                treeView1.SelectedNode.Nodes.Add(stud.FirstName);
+            }
         }
     }
 }

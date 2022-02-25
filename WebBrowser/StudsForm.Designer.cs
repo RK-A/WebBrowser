@@ -30,8 +30,8 @@ namespace WebBrowser
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("09-121");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("09-122");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("09-121");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("09-122");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -96,13 +96,13 @@ namespace WebBrowser
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Узел0";
-            treeNode1.Text = "09-121";
-            treeNode2.Name = "Узел1";
-            treeNode2.Text = "09-122";
+            treeNode11.Name = "Узел0";
+            treeNode11.Text = "09-121";
+            treeNode12.Name = "Узел1";
+            treeNode12.Text = "09-122";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode11,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(363, 121);
             this.treeView1.TabIndex = 0;
             this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
@@ -124,12 +124,14 @@ namespace WebBrowser
             this.FirstName,
             this.Age,
             this.Decription});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(433, 450);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SecondName
             // 
@@ -165,13 +167,14 @@ namespace WebBrowser
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(192, 26);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.openToolStripMenuItem.Text = "Открыть";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.openToolStripMenuItem.Text = "Открыть выделенное";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // StudsForm
             // 

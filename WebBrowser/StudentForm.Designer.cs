@@ -36,6 +36,8 @@ namespace WebBrowser
             this.button1 = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.labelAbout = new System.Windows.Forms.Label();
+            this.textBoxAbout = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +80,7 @@ namespace WebBrowser
             this.button1.TabIndex = 5;
             this.button1.Text = "Сохранить ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelName
             // 
@@ -95,12 +98,30 @@ namespace WebBrowser
             this.textBoxAge.Size = new System.Drawing.Size(95, 20);
             this.textBoxAge.TabIndex = 6;
             // 
+            // labelAbout
+            // 
+            this.labelAbout.AutoSize = true;
+            this.labelAbout.Location = new System.Drawing.Point(152, 152);
+            this.labelAbout.Name = "labelAbout";
+            this.labelAbout.Size = new System.Drawing.Size(57, 13);
+            this.labelAbout.TabIndex = 9;
+            this.labelAbout.Text = "Описание";
+            // 
+            // textBoxAbout
+            // 
+            this.textBoxAbout.Location = new System.Drawing.Point(278, 149);
+            this.textBoxAbout.Name = "textBoxAbout";
+            this.textBoxAbout.Size = new System.Drawing.Size(95, 20);
+            this.textBoxAbout.TabIndex = 8;
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(635, 171);
+            this.ClientSize = new System.Drawing.Size(635, 235);
+            this.Controls.Add(this.labelAbout);
+            this.Controls.Add(this.textBoxAbout);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxAge);
             this.Controls.Add(this.button1);
@@ -126,5 +147,7 @@ namespace WebBrowser
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.Label labelAbout;
+        private System.Windows.Forms.TextBox textBoxAbout;
     }
 }
