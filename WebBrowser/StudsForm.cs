@@ -24,8 +24,9 @@ namespace WebBrowser
                 studentsList.Add(new Student(stud.Split(' ')[0], 
                     stud.Split(' ')[1], 
                     stud.Split(' ')[2], 
-                    stud.Split(' ')[3], 
-                    string.Join(" ", stud.Split(' ').Skip(4)).Trim()));
+                    stud.Split(' ')[3],
+                    stud.Split(' ')[4],
+                    string.Join(" ", stud.Split(' ').Skip(5)).Trim()));
             }
         }
 
@@ -47,6 +48,14 @@ namespace WebBrowser
                 treeView1.SelectedNode.Nodes.Add(stud.LastName);
             }
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string LsName = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Student student = studentsList.First(x => x.FirstName.Equals(LsName));
+            StudentForm studentForm = new StudentForm(student); 
+            studentForm.ShowDialog();
         }
     }
 }

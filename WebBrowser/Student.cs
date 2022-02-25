@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebBrowser
 {
-    class Student
+    public class Student
     {
         string firstName;
         string lastName;
@@ -15,7 +15,7 @@ namespace WebBrowser
         string group;
         string idPic;
 
-        public Student(string firstName, string lastName, string age, string descripton, string group, string idPic)
+        public Student(string firstName, string lastName, string age, string group, string idPic, string descripton)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -30,10 +30,11 @@ namespace WebBrowser
         public string Age { get => age; set => age = value; }
         public string Descripton { get => descripton; set => descripton = value; }
         public string Group { get => group; set => group = value; }
+        public string IdPic { get => idPic; set => idPic = value; }
+
         public string[] ToArr()
         {
             return new string[] { FirstName, LastName, Age, Descripton, Group};
-
         }
     }
 }
