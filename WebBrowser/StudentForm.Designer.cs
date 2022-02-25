@@ -45,20 +45,21 @@ namespace WebBrowser
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(195, 12);
+            this.textBoxName.Location = new System.Drawing.Point(358, 85);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(323, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxGroup
             // 
-            this.textBoxGroup.Location = new System.Drawing.Point(278, 84);
+            this.textBoxGroup.Location = new System.Drawing.Point(441, 157);
             this.textBoxGroup.Name = "textBoxGroup";
             this.textBoxGroup.Size = new System.Drawing.Size(95, 20);
             this.textBoxGroup.TabIndex = 2;
@@ -66,7 +67,7 @@ namespace WebBrowser
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 85);
+            this.label1.Location = new System.Drawing.Point(315, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 4;
@@ -74,7 +75,7 @@ namespace WebBrowser
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(413, 114);
+            this.button1.Location = new System.Drawing.Point(576, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 5;
@@ -85,7 +86,7 @@ namespace WebBrowser
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(152, 117);
+            this.labelName.Location = new System.Drawing.Point(315, 190);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(52, 13);
             this.labelName.TabIndex = 7;
@@ -93,7 +94,7 @@ namespace WebBrowser
             // 
             // textBoxAge
             // 
-            this.textBoxAge.Location = new System.Drawing.Point(278, 114);
+            this.textBoxAge.Location = new System.Drawing.Point(441, 187);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.Size = new System.Drawing.Size(95, 20);
             this.textBoxAge.TabIndex = 6;
@@ -101,7 +102,7 @@ namespace WebBrowser
             // labelAbout
             // 
             this.labelAbout.AutoSize = true;
-            this.labelAbout.Location = new System.Drawing.Point(152, 152);
+            this.labelAbout.Location = new System.Drawing.Point(315, 225);
             this.labelAbout.Name = "labelAbout";
             this.labelAbout.Size = new System.Drawing.Size(57, 13);
             this.labelAbout.TabIndex = 9;
@@ -109,7 +110,7 @@ namespace WebBrowser
             // 
             // textBoxAbout
             // 
-            this.textBoxAbout.Location = new System.Drawing.Point(278, 149);
+            this.textBoxAbout.Location = new System.Drawing.Point(441, 222);
             this.textBoxAbout.Name = "textBoxAbout";
             this.textBoxAbout.Size = new System.Drawing.Size(95, 20);
             this.textBoxAbout.TabIndex = 8;
@@ -119,7 +120,7 @@ namespace WebBrowser
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(635, 235);
+            this.ClientSize = new System.Drawing.Size(821, 382);
             this.Controls.Add(this.labelAbout);
             this.Controls.Add(this.textBoxAbout);
             this.Controls.Add(this.labelName);
