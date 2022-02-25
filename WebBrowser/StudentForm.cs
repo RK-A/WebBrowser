@@ -44,6 +44,28 @@ namespace WebBrowser
                 id, 
                 textBoxAbout.Text);
             students[indexStud] = stud;
+            var bd = File.ReadAllText($@"{Environment.CurrentDirectory}\Base.txt").Split(new string[] { "\r\n"}, StringSplitOptions.None);
+            using (StreamWriter stream = new StreamWriter($@"{Environment.CurrentDirectory}\Base.txt"))
+            {
+                for (int i = 0; i < bd.Length; i++)
+                {
+                    if (i==indexStud)
+                    {
+
+                        stream.WriteLine(string.Join(" ",
+                            FsName,
+                            LsName,
+                            textBoxAge.Text,
+                            textBoxGroup.Text,
+                            id,
+                            textBoxAbout.Text));
+                    }
+                    else
+                    {
+                        stream.WriteLine(bd[i]);
+                    }
+                }
+            }
             this.Close();
         }
     }
